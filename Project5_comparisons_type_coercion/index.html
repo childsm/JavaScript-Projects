@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Typeof NAN more, start Step94</title>
+        <script src="JS/main.js"></script>
+    </head>
+
+    <body>
+        
+<!-- for step 94 **use typeof -->
+        <p onclick="whatIsit()" style="font-family:cursive; color:darkblue; font-size:18px;">Click this last and I'll be gone.</p>
+
+<!-- for step 97 **use isNaN-->
+        <p id="Test1" onclick="myNaN()" style="font-family:Times; color:green; font-size:21px;">This is only a Test.</p>
+        <p id="Test2" onclick="myTrue()" style="font-family:Times; color:green; font-size:21px;">Again! This is only a Test.</p>
+        <p id="Test3" onclick="myFalse()" style="font-family:Times; color:green; font-size:21px;">Is this really a Test?</p>
+
+<!-- for step 100 **display infinity and -infinity -->
+        <p id="spaceRanger" onclick="Buzz()" style="font-family:sans-serif; color:red; font-size:24px;">To infinity and beyond!</p>
+        <p id="Galactic" onclick="Alliance()" style="font-family:sans-serif; color:red; font-size:24px;">I can Fly.</p>
+
+<!-- for step 102 **use < and > -->
+        <p id="boolT" onclick="amiTrue()" style="font-family:Courier; color:purple; font-size:27px;">Bool Yah N</p>
+        <p id="boolF" onclick="amiFalse()" style="font-family:Courier; color:purple; font-size:27px;">What? That's wrong? Its Boo Lee N?</p>
+
+<!-- for step 115 **using NOT -->
+        <p id="not" onclick="notF()" style="font-family:cursive; color:green; font-size:24px;">NOT True</p> 
+        <p id="notF" onclick="notFF()" style="font-family:cursive; color:green; font-size:24px;">NOT False</p> 
+
+<!-- for step 104 showing results in console-->
+        <script>console.log(2+3);</script>
+
+<!-- for step 106 showing coercion -->
+        <span style="font-size:18px; color:brown;">
+            <script>document.write("Hell" + 0);</script>
+        </span><br><br>
+
+<!-- for step 107 showing "false" in console-->
+        <script>console.log(2 > 3);</script>
+
+<!-- for step 109 showing show true and false for == -->
+        <span style="font-size:18px; color:brown;">        
+            <script>document.write(5 == 5);</script><br>
+            <script>document.write(Math.E == Math.PI);</script><br><br>
+        </span>
+
+<!-- for step 111 use === -->
+        <span style="font-size:18px; color:lightblue;">
+            <script>
+                var a = 32, b = 32, c = "35", d = "32"; 
+                document.write(a === b); //match data type and value
+                document.write(a === c); //different data type and different value
+                document.write(a === d); //different data type but same value
+                document.write(c === d); //same data type but different value
+            </script>
+        </span><br><br>
+
+<!-- for step 113 use logic operators -->
+        <span style="font-size:18px; color:forestgreen;">
+            <script>
+                document.write(6 > 5 && 4 > 3); //use AND to display true
+                document.write(6 > 5 && 4 < 3); //use AND to display false
+                document.write(1 < 2 || 4 < 3); //use OR to display true
+                document.write(6 < 5 || 1 > 2); //use OR to display false
+            </script>
+        </span>
+
+
+
+    </body>
+</html>
