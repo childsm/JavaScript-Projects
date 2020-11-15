@@ -12,3 +12,9 @@ function concatF() { //for step 63 use the += operator
     first += "to go to sleep";
     document.getElementById("concat").innerHTML = first;
 }
+
+function finalClick() { //for step 68 use JS function and ById method
+    var x = 2, y = 16;
+    var z = Math.pow(x, y);
+    document.getElementById("maybeMath").innerHTML = z;
+}
