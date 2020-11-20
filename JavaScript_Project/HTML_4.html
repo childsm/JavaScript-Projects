@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrow Function, step252</title>
+    </head>
+
+    <body>
+
+        <h3 style="color:forestgreen">See the console.</h3>
+        <p input="answer" onclick="eval(x)" style="color:blue">See console</p>
+        <p input="answer2" onclick="eval2(y)" style="color:red">See console</p>
+        
+        <!-- Start with a regular function -->
+        <script>
+            let x = 4.3125;
+            function eval(x) {
+                return Math.floor(x);
+            }
+            //document.getElementById('answer').innerHTML = eval(x);
+            console.log(eval(x));
+            
+            // Now use an arrow function
+            var y = 2.1452;
+            eval2 = y => Math.floor(y);
+            //document.addEventListener("answer2", eval2(y));
+            //{ document.getElementById('answer2').innerHTML += this; }
+            console.log(eval2(y));
+        </script>
+        
+    </body>
+</html>
