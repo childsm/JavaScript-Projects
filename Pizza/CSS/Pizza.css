@@ -1,0 +1,83 @@
+/* ==============================
+    course JS step 276
+    Pizza menu and order
+   ============================== */
+body {
+    background-color: #ddd;
+}
+
+h1  {
+    font-family: cursive;
+    color: darkblue;
+    padding-left: 80px;
+}
+
+h3, div {
+    font-family: cursive;
+    color: darkblue;
+}
+
+   /*Set the size of the pizza menu container, center on page, & distance from top of page */
+#menuBG {
+    width: 600px;
+    height: 520px;
+    margin: 5px auto;
+}
+
+#frmMenu {
+    width: 600px;
+    height: 220px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin 10px auto;
+    float: right;
+}
+
+.left {
+    width: 33%;
+    height: 200px;
+    float: left;
+}
+
+.middle {
+    width: 34%;
+    height: 210px;
+    float: left;
+
+}
+
+.right {
+    width: 33%;
+    height: 210px;
+    float: right;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 10px auto;
+    float: left;
+    font-size: 14px;
+}
+
+#cart {
+    top: 1;
+    margin: 10px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0 0 175px;
+    width: 100px;
+    height: 40px;
+    background: white;
+    display: block;
+    text-align: center;
+}
+
+/*
+*/   
