@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <!-- Step 308 **jQuery video -->
+        <script>
+            $(document).ready(function() { //$ is the same as writing jQuery, which says I'd like to check the whole DOM (document)
+                $("html").append( // the backslash (on next line) says we're continuing our string on the next line
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                <h1>Basic jQuery</h1>\
+                                <p id='1'>Paragraph 1</p>\
+                                <p id='2'>Paragraph 2</p>\
+                                <p id='3'>Paragraph 3</p>\
+                            </div>\
+                        </div>\
+                    </body>"    
+                );
+                $("#2").css({"color":"red"}); //takes paragraph 2 and makes the font red
+                $("#3").click(function() {
+                    $('h1').hide(); //could put something in the parentheses to modify how to hide
+                });
+            }); 
+        </script>
+
+        <!-- Step 309 **jQuery video -->
+        <p id="4">Hello (click here)</p>
+        <h2>and Goodbye</h2>
+        <script>
+            $(document).ready(function() {
+                $("#4").click(function() {
+                    $("#4").css({"font-size":"36px", 
+                    "font-family":"cursive", 
+                    "color":"darkblue"});
+                });
+                $("h2").hide().show(1250);
+            });
+        </script>
+        
+    </body>
+</html>
