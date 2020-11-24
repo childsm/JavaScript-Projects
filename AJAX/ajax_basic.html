@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent('content.html', myFunction)">
+            </div>
+
+        <!-- Both scripts work to dynamically update page with new content -->
+        <script type="text/javascript">
+            function getContent(url, cFunction) { 
+                var ajax = new XMLHttpRequest();
+                ajax.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        cFunction(this);
+                    }
+                };
+                ajax.open('GET', url, true);
+                ajax.send();
+            }
+            function myFunction(ajax) {
+                document.getElementById('content').innerHTML = ajax.responseText;
+            }
+        </script>
+
+        <!-- The steps below are following the video from step 295 -->
+        <!--
+		<script type="text/javascript">
+            
+            // STEP 1: Setup the XML http request objects
+            var ajax = new XMLHttpRequest(); //setup and how to call from the ajax class
+
+            // Step 2: prepare the open ajax request (this is specific to the web brower)
+            ajax.open('GET', 'content.html'); //setup browser how to handle the data and receive it
+
+            // Step 3: define the ajax response callback method (ready state of four)
+            ajax.onreadystatechange = function() { //and setup callback and what to do once data is received [one callback function for each AJAX task]
+                if (ajax.readyState == 4) {
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+
+            // Step 4: send the ajax request for data (find trigger or event, suchas "onclick")
+            function getContent() {
+                ajax.send();
+                document.getElementById('btncontent').style.display = none; //hides the input button. I did comment out this line and nothing changed on the site
+            }
+
+		</script>-->
+    </body>
+</html>
