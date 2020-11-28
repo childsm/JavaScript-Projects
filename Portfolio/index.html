@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MChilds Portfolio</title>
+	<link rel="stylesheet" href="MChilds_Portfolio.css">
+</head>
+
+<body>
+       
+<!-- Nav -->
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#slideshow">Slideshow</a>
+        <a href="#about">About</a>
+        <a href="#github">GitHub</a>
+        <a onclick="openForm()">Contact</a>
+    </div>
+
+<!-- HOME SECTION -->
+    <br id="home">
+    <br>
+
+<!-- VIDEO SECTION-->
+    <video autoplay muted loop id="Coding_Video">
+        <source src="typing_code.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+<!-- Video text -->
+    <div class="Video_Text">
+        <h1 style="color:#fff;">Software Developer Student</h1>
+            <p><strong><center>
+                <q>Bringing computers to life. One bit at a time.</q>
+                <span><br>-Me<br><br> 
+                My name is Michelle Childs. Welcome to a snippet of my world through a portfolio.</span>
+            </center></strong></p>
+    </div>
+
+<!-- SLIDESHOW SECTION -->
+    <div id="slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 5</div>
+                    <img class="Slide_show_Images" src="Images/myself.jpg" style="width:100%">
+                    <div class="text">Solving your engineering or programing needs.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 5</div>
+                    <img class="Slide_show_Images" src="Images/tbm1.png" style="width:100%">
+                    <a class="text" href="https://www.linkedin.com/in/michelle-childs-mechanical-engineer/">Engineering LinkedIn Provile</a>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 5</div>
+                    <img class="Slide_show_Images" src="Images/HTML-CSS-JS.jpeg" style="width:100%">
+                    <div class="text">Full Stack with HTML5, CSS3, & JavaScript5</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 5</div>
+                    <img class="Slide_show_Images" src="Images/SQL.jpg" style="width:100%">
+                    <div class="text">Coming soon . . .<br>back end development, databases &SQL</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 5</div>
+                    <img class="Slide_show_Images" src="Images/img-email.jpg" style="width:100%">
+                    <a class="text" href="#Contact">Contact me today!</a>
+                </div>
+            
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        
+        <br>
+  
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+        </div>
+    </div>
+
+<!-- About Section  -->
+    <div class="row" id="about">
+        <div class="column_2">
+            <img src="./Images/about-img.jpg" alt="Computer with code on screen.">
+        </div>
+
+        <div class="column_1">
+            <h1>About</h1>
+                <p>I am studying at The Tech Academy, which is fulfilling my long interest in computer programming.
+                    <br><br>
+                    My goal is to combine coding with my years of mechanical engineering. The combination will be utilized for design automation systems and develop custom programs that simplify the mundane and painful but essential tasks for engineering.
+                </p>                
+        </div>
+    </div>
+
+<!-- Github Section  -->
+    <div class="row" id="github">
+        <div class="column_1">
+            <h1>GitHub</h1>
+                <p><center>View all my project here:</center></p>
+                <br>
+                <center><a href="https://github.com/childsm/HTML-and-CSS-Projects" target="_blank">MChilds Github</a></center>
+        </div>
+
+        <div class="column_2">
+            <a href="https://github.com/childsm/HTML-and-CSS-Projects" target="_blank">
+                <img src="./Images/GitHub.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+
+<!-- Contact Section  -->
+    <div id="contact">
+        <button onclick="openForm()" class="popup_button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/childsm@live.com" method="POST" class="form-container">
+            <h2>Contact</h2>
+                <label for="name">Name:</label>
+                    <input type="text" placeholder="Please enter your name here" name="name" required>
+                <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="Please enter your email here" name="email" required>
+                <label for="message">Message:</label>
+                    <input type="text" placeholder="Please write your message here" name="message">
+            
+                <button class="btnS" type="submit">SUBMIT</button>
+                <button class="btnC cancel" type="button" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Footer Section -->
+    <footer>
+        <p><center>
+            &copy; MChilds Portfolio &nbsp; | &nbsp; Studying at 
+            <a href="https://learncodinganywhere.com/">The Tech Academy</a>
+        </center></p>
+    </footer>
+
+    <script src="JS/portfolio.js"></script>
+
+</body>
+</html>
